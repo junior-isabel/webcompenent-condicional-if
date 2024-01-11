@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component if</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<template id="calculator">
+
+  <p>
+    <b id="value1">
+      <slot name="value1">value 1</slot>
+    </b>
+    <slot name="add"></slot>
+    <slot name="sub"></slot>
+    <slot name="div"></slot>
+    <slot name="mult"></slot>
+    <b id="value2">
+      <slot name="value2">value 2</slot>
+    </b>
+    <slot name="result"></slot>
+
+  </p>
+</template>
+
+<body>
+  <p>Hello, World</p>
+  <if-else value="1" if-true="Sentença verdadeira" if-false="Sentença falsa">
+  </if-else>
+
+  <wc-calculator value1="11" oper="+" value2="93">
+    <span slot="value1">15</span>
+    <span slot="add">+</span>
+    <span slot="value2">15</span>
+    <span slot="result">resultado</span>
+  </wc-calculator>
+
+
+
+
+
+</body>
+
+</html>
